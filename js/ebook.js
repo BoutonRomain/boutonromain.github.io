@@ -1,5 +1,5 @@
 /**
- * E-Book Navigation – BUT Informatique
+ * E-Book Navigation – Portfolio PPP
  */
 (function () {
   'use strict';
@@ -7,8 +7,10 @@
   // ── Page registry ────────────────────────────────────────────────
   const pages = [
     'cover',
-    'intro',
-    'c1', 'c2', 'c3', 'c4', 'c5', 'c6',
+    'about',
+    'parcours',
+    'projets',
+    'competences',
     'conclusion'
   ];
 
