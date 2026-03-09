@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Book – Compétences BUT Informatique (Année 3)</title>
+  <meta name="description" content="E-book présentant les compétences acquises à l'issue de la troisième année de BUT Informatique." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ══════════════════════════════════════════════
+       SIDEBAR / NAVIGATION
+  ══════════════════════════════════════════════ -->
+  <nav id="sidebar" aria-label="Table des matières">
+    <div id="sidebar-header">
+      <span class="book-icon" aria-hidden="true">📖</span>
+      <h1>E-Book BUT Informatique</h1>
+      <p>Compétences de 3ème année</p>
+    </div>
+
+    <ul id="toc" role="list">
+      <li><a href="#intro"       data-page="intro">
+        <span class="toc-number">00</span>Introduction
+      </a></li>
+
+      <li class="toc-divider" role="separator"></li>
+
+      <li><a href="#c1" data-page="c1">
+        <span class="toc-number">01</span>Réaliser
+      </a></li>
+      <li><a href="#c2" data-page="c2">
+        <span class="toc-number">02</span>Optimiser
+      </a></li>
+      <li><a href="#c3" data-page="c3">
+        <span class="toc-number">03</span>Administrer
+      </a></li>
+      <li><a href="#c4" data-page="c4">
+        <span class="toc-number">04</span>Gérer
+      </a></li>
+      <li><a href="#c5" data-page="c5">
+        <span class="toc-number">05</span>Conduire
+      </a></li>
+      <li><a href="#c6" data-page="c6">
+        <span class="toc-number">06</span>Collaborer
+      </a></li>
+
+      <li class="toc-divider" role="separator"></li>
+
+      <li><a href="#conclusion" data-page="conclusion">
+        <span class="toc-number">✦</span>Conclusion
+      </a></li>
+    </ul>
+
+    <div id="reading-progress-bar" aria-hidden="true">
+      <div id="reading-progress-fill"></div>
+    </div>
+    <div id="reading-progress-label" aria-live="polite">0% lu</div>
+  </nav>
+
+  <!-- Mobile menu button -->
+  <button id="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+
+  <!-- ══════════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════════ -->
+  <main id="main">
+
+    <!-- ── COVER ──────────────────────────────── -->
+    <section id="page-cover" class="page" aria-label="Page de couverture">
+      <div class="cover-emblem" aria-hidden="true">🎓</div>
+      <div class="cover-subtitle">Portfolio de compétences</div>
+      <h1 class="cover-title">BUT Informatique<br>Troisième Année</h1>
+      <p class="cover-edition">Édition 2024–2025</p>
+      <div class="cover-divider" aria-hidden="true"></div>
+      <p class="cover-description">
+        Ce livret numérique présente les six compétences du référentiel national du
+        <strong>Bachelor Universitaire de Technologie Informatique</strong>, atteintes à l'issue
+        de la troisième et dernière année de formation. Chaque compétence est illustrée
+        par ses apprentissages critiques, ses technologies associées et des exemples
+        de réalisations concrètes.
+      </p>
+      <div class="cover-competencies" aria-label="Les six compétences">
+        <span class="cover-badge c1">💻 Réaliser</span>
+        <span class="cover-badge c2">⚡ Optimiser</span>
+        <span class="cover-badge c3">🖧 Administrer</span>
+        <span class="cover-badge c4">🗄️ Gérer</span>
+        <span class="cover-badge c5">📋 Conduire</span>
+        <span class="cover-badge c6">🤝 Collaborer</span>
+      </div>
+      <button class="btn-start" data-page="intro">Commencer la lecture →</button>
+    </section>
+
+    <!-- ── INTRODUCTION ───────────────────────── -->
+    <section id="page-intro" class="page" aria-label="Introduction">
+      <div class="chapter-header">
+        <span class="chapter-tag" style="background:var(--color-accent)">Introduction</span>
+        <p class="chapter-number">Préface</p>
+        <h2 class="chapter-title">Le BUT Informatique</h2>
+        <p class="chapter-subtitle">Un diplôme national de niveau 6 (licence)</p>
+      </div>
+
+      <p>
+        Le <strong>Bachelor Universitaire de Technologie (BUT) Informatique</strong> est un
+        diplôme national de l'enseignement supérieur français, délivré par les Instituts
+        Universitaires de Technologie (IUT). D'une durée de trois ans (six semestres),
+        il remplace l'ancien DUT depuis 2021 et confère le grade de licence.
+      </p>
+      <p>
+        La formation s'articule autour de six <strong>compétences transversales</strong>
+        définies par le référentiel national, développées progressivement du niveau 1
+        (BUT 1) au niveau 3 (BUT 3). À l'issue de la troisième année, l'étudiant est
+        capable d'intervenir de manière autonome sur l'ensemble du cycle de vie d'un
+        système informatique.
+      </p>
+
+      <h2>Structure de la formation</h2>
+
+      <div class="intro-grid">
+        <div class="intro-card">
+          <span class="intro-icon">📅</span>
+          <h3>3 ans · 6 semestres</h3>
+          <p>1 800 heures d'enseignement + stages et alternance</p>
+        </div>
+        <div class="intro-card">
+          <span class="intro-icon">🏭</span>
+          <h3>Professionnalisation</h3>
+          <p>Stage de fin d'études (S6) ou contrat d'alternance</p>
+        </div>
+        <div class="intro-card">
+          <span class="intro-icon">🔭</span>
+          <h3>Parcours (BUT 2–3)</h3>
+          <p>Spécialisations : IAMSI, RACDV, DACS, Cyber…</p>
+        </div>
+        <div class="intro-card">
+          <span class="intro-icon">📜</span>
+          <h3>Niveau Bac+3</h3>
+          <p>Grade de licence · Niveau européen EQF 6</p>
+        </div>
+      </div>
+
+      <h2>Les six compétences du référentiel</h2>
+      <p>
+        Chacune des six compétences est déclinée en <em>apprentissages critiques</em> (AC)
+        qui précisent ce que l'étudiant doit être capable de faire à chaque niveau.
+        Ce livret présente le niveau 3, celui de la sortie du BUT.
+      </p>
+
+      <table class="competency-overview" aria-label="Vue d'ensemble des compétences">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Compétence</th>
+            <th>Domaine</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="competency-dot" style="background:var(--c1)"></span>C1</td>
+            <td><strong>Réaliser</strong></td>
+            <td>Développement d'applications robustes et complexes</td>
+          </tr>
+          <tr>
+            <td><span class="competency-dot" style="background:var(--c2)"></span>C2</td>
+            <td><strong>Optimiser</strong></td>
+            <td>Performance algorithmique et qualité logicielle</td>
+          </tr>
+          <tr>
+            <td><span class="competency-dot" style="background:var(--c3)"></span>C3</td>
+            <td><strong>Administrer</strong></td>
+            <td>Systèmes et réseaux communicants sécurisés</td>
+          </tr>
+          <tr>
+            <td><span class="competency-dot" style="background:var(--c4)"></span>C4</td>
+            <td><strong>Gérer</strong></td>
+            <td>Bases de données et gestion de l'information</td>
+          </tr>
+          <tr>
+            <td><span class="competency-dot" style="background:var(--c5)"></span>C5</td>
+            <td><strong>Conduire</strong></td>
+            <td>Gestion et suivi de projets informatiques</td>
+          </tr>
+          <tr>
+            <td><span class="competency-dot" style="background:var(--c6)"></span>C6</td>
+            <td><strong>Collaborer</strong></td>
+            <td>Travail en équipe et communication professionnelle</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        « À l'issue du BUT Informatique, le diplômé est en mesure de concevoir, développer,
+        déployer et maintenir des systèmes informatiques complexes, en travaillant de manière
+        autonome et en équipe, dans le respect des contraintes techniques, économiques et
+        humaines. »
+      </div>
+
+      <nav class="page-nav" aria-label="Navigation entre pages">
+        <button class="btn-nav btn-prev" data-page="0" style="visibility:hidden">← Précédent</button>
+        <span class="page-nav-info"></span>
+        <button class="btn-nav btn-next" data-page="2">Suivant →</button>
+      </nav>
+    </section>
+
+    <!-- ── CHAPITRE 1 : RÉALISER ──────────────── -->
+    <section id="page-c1" class="page" aria-label="Compétence 1 – Réaliser">
+      <div class="chapter-header">
+        <span class="chapter-tag" style="background:var(--c1)">Compétence 1</span>
+        <p class="chapter-number">Chapitre 01</p>
+        <h2 class="chapter-title">Réaliser</h2>
+        <p class="chapter-subtitle">Concevoir, développer des applications robustes et complexes</p>
+      </div>
+
+      <p>
+        La compétence <strong>Réaliser</strong> est le cœur du métier de développeur
+        informatique. À l'issue du BUT 3, l'étudiant sait concevoir et construire des
+        applications complètes répondant à des exigences fonctionnelles et non fonctionnelles
+        élevées : performance, sécurité, maintenabilité et évolutivité.
+      </p>
+
+      <div class="learning-outcomes c1">
+        <h3>Apprentissages Critiques – Niveau 3</h3>
+        <ul>
+          <li>Choisir et implémenter les architectures logicielles adaptées (MVC, microservices, événementielle…)</li>
+          <li>Concevoir et développer des applications robustes à l'aide de patrons de conception</li>
+          <li>Intégrer des solutions dans un environnement de production (CI/CD, conteneurs)</li>
+          <li>Rédiger des tests unitaires, d'intégration et fonctionnels automatisés</li>
+          <li>Faire évoluer une application existante tout en maîtrisant la dette technique</li>
+        </ul>
+      </div>
+
+      <h2>Domaines de compétences techniques</h2>
+
+      <div class="skill-grid">
+        <div class="skill-card">
+          <span class="skill-icon">🏗️</span>
+          <h4>Architecture logicielle</h4>
+          <p>MVC, MVVM, Clean Architecture, microservices, API REST &amp; GraphQL</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🎨</span>
+          <h4>Développement web</h4>
+          <p>HTML5, CSS3, JavaScript ES6+, React, Vue.js, Node.js, Django, Spring Boot</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📱</span>
+          <h4>Applications mobiles</h4>
+          <p>Android (Kotlin/Java), Flutter, développement hybride</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🧪</span>
+          <h4>Tests &amp; Qualité</h4>
+          <p>JUnit, pytest, Selenium, couverture de code, TDD/BDD</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔄</span>
+          <h4>Patrons de conception</h4>
+          <p>GoF (Factory, Observer, Strategy…), SOLID, DRY, KISS</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🚀</span>
+          <h4>DevOps &amp; CI/CD</h4>
+          <p>Git, GitHub Actions, GitLab CI, Docker, intégration continue</p>
+        </div>
+      </div>
+
+      <h2>Technologies maîtrisées</h2>
+      <div class="tech-tags" aria-label="Technologies">
+        <span class="tech-tag">Java</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">JavaScript / TypeScript</span>
+        <span class="tech-tag">C / C++</span>
+        <span class="tech-tag">PHP</span>
+        <span class="tech-tag">Spring Boot</span>
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Vue.js</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">Django</span>
+        <span class="tech-tag">REST API</span>
+        <span class="tech-tag">GraphQL</span>
+        <span class="tech-tag">Docker</span>
+        <span class="tech-tag">Git / GitHub</span>
+        <span class="tech-tag">JUnit 5</span>
+        <span class="tech-tag">Maven / Gradle</span>
+      </div>
+
+      <h2>Exemples de réalisations</h2>
+
+      <div class="project-card">
+        <h4>🛒 Application web e-commerce full-stack</h4>
+        <p>
+          Conception et développement d'une plateforme de vente en ligne avec gestion
+          des utilisateurs, catalogue produits, panier, paiement et tableau de bord
+          administrateur. Architecture MVC, API REST, tests automatisés, déploiement
+          continu via Docker et GitHub Actions.
+        </p>
+        <div class="project-meta">
+          <span>🏷️ React · Node.js · PostgreSQL · Docker</span>
+          <span>📅 SAÉ Semestre 5</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h4>📅 Application de gestion d'agenda collaboratif</h4>
+        <p>
+          Application mobile Android permettant la gestion partagée d'événements
+          avec notifications push, synchronisation en temps réel et gestion des
+          droits d'accès par rôle.
+        </p>
+        <div class="project-meta">
+          <span>🏷️ Kotlin · Firebase · Android · MVVM</span>
+          <span>📅 Projet alternance</span>
+        </div>
+      </div>
+
+      <nav class="page-nav" aria-label="Navigation entre pages">
+        <button class="btn-nav btn-prev" data-page="1">← Précédent</button>
+        <span class="page-nav-info"></span>
+        <button class="btn-nav btn-next" data-page="3">Suivant →</button>
+      </nav>
+    </section>
+
+    <!-- ── CHAPITRE 2 : OPTIMISER ─────────────── -->
+    <section id="page-c2" class="page" aria-label="Compétence 2 – Optimiser">
+      <div class="chapter-header">
+        <span class="chapter-tag" style="background:var(--c2)">Compétence 2</span>
+        <p class="chapter-number">Chapitre 02</p>
+        <h2 class="chapter-title">Optimiser</h2>
+        <p class="chapter-subtitle">Proposer des applications informatiques optimisées en fonction de critères spécifiques</p>
+      </div>
+
+      <p>
+        La compétence <strong>Optimiser</strong> va au-delà de la simple programmation :
+        elle consiste à analyser, mesurer et améliorer les performances d'un système
+        logiciel en termes de temps d'exécution, de consommation mémoire, de scalabilité
+        et de qualité du code.
+      </p>
+
+      <div class="learning-outcomes c2">
+        <h3>Apprentissages Critiques – Niveau 3</h3>
+        <ul>
+          <li>Anticiper les résultats de diverses métriques (complexité temporelle et spatiale)</li>
+          <li>Profiler, analyser et justifier le comportement d'un code existant</li>
+          <li>Choisir et utiliser des structures de données et algorithmes adaptés</li>
+          <li>Mettre en œuvre des techniques de programmation concurrente et parallèle</li>
+          <li>Appliquer des méthodes de refactoring pour améliorer la qualité logicielle</li>
+        </ul>
+      </div>
+
+      <h2>Domaines de compétences techniques</h2>
+
+      <div class="skill-grid">
+        <div class="skill-card">
+          <span class="skill-icon">📊</span>
+          <h4>Algorithmique avancée</h4>
+          <p>Complexité O(n), structures de graphes, algorithmes de tri, recherche dichotomique, programmation dynamique</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔬</span>
+          <h4>Profilage &amp; mesure</h4>
+          <p>Profilers (JProfiler, cProfile, perf), benchmarks, détection de goulots d'étranglement</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">⚙️</span>
+          <h4>Programmation système</h4>
+          <p>Gestion mémoire, threads, processus, synchronisation, verrous, sémaphores</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🧮</span>
+          <h4>Calcul scientifique</h4>
+          <p>NumPy, matrices, algèbre linéaire, approximations numériques</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">♻️</span>
+          <h4>Refactoring</h4>
+          <p>Clean Code, élimination de la dette technique, revue de code automatisée</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">☁️</span>
+          <h4>Scalabilité</h4>
+          <p>Mise en cache (Redis), indexation de base de données, load balancing, CDN</p>
+        </div>
+      </div>
+
+      <h2>Technologies maîtrisées</h2>
+      <div class="tech-tags" aria-label="Technologies">
+        <span class="tech-tag">Analyse de complexité</span>
+        <span class="tech-tag">Graphes &amp; arbres</span>
+        <span class="tech-tag">C (bas niveau)</span>
+        <span class="tech-tag">Threads Java</span>
+        <span class="tech-tag">OpenMP</span>
+        <span class="tech-tag">NumPy</span>
+        <span class="tech-tag">Redis</span>
+        <span class="tech-tag">JProfiler</span>
+        <span class="tech-tag">cProfile (Python)</span>
+        <span class="tech-tag">SonarQube</span>
+        <span class="tech-tag">JMeter</span>
+        <span class="tech-tag">Valgrind</span>
+      </div>
+
+      <h2>Exemples de réalisations</h2>
+
+      <div class="project-card">
+        <h4>🗺️ Optimisation d'un algorithme de routage</h4>
+        <p>
+          Implémentation et comparaison de plusieurs algorithmes de plus court chemin
+          (Dijkstra, A*, Bellman-Ford) sur un graphe routier réel. Analyse de la
+          complexité, mesures de performances et visualisation des résultats.
+        </p>
+        <div class="project-meta">
+          <span>🏷️ Java · Graphes · JUnit · JMH</span>
+          <span>📅 SAÉ Semestre 4</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h4>⚡ Refactoring d'une application legacy</h4>
+        <p>
+          Audit de qualité d'une application PHP existante via SonarQube, identification
+          des anti-patterns, refactoring progressif et mise en place de tests de
+          non-régression. Réduction de 40 % du temps de réponse moyen.
+        </p>
+        <div class="project-meta">
+          <span>🏷️ PHP · SonarQube · PHPUnit · MySQL</span>
+          <span>📅 Projet entreprise – Alternance</span>
+        </div>
+      </div>
+
+      <nav class="page-nav" aria-label="Navigation entre pages">
+        <button class="btn-nav btn-prev" data-page="2">← Précédent</button>
+        <span class="page-nav-info"></span>
+        <button class="btn-nav btn-next" data-page="4">Suivant →</button>
+      </nav>
+    </section>
+
+    <!-- ── CHAPITRE 3 : ADMINISTRER ───────────── -->
+    <section id="page-c3" class="page" aria-label="Compétence 3 – Administrer">
+      <div class="chapter-header">
+        <span class="chapter-tag" style="background:var(--c3)">Compétence 3</span>
+        <p class="chapter-number">Chapitre 03</p>
+        <h2 class="chapter-title">Administrer</h2>
+        <p class="chapter-subtitle">Déployer et maintenir des systèmes informatiques communicants et sécurisés</p>
+      </div>
+
+      <p>
+        La compétence <strong>Administrer</strong> couvre la mise en œuvre, la configuration
+        et la sécurisation des infrastructures réseau et système. À l'issue du BUT 3,
+        l'étudiant est capable de concevoir et d'exploiter des architectures cloud modernes
+        tout en assurant la continuité de service et la sécurité des données.
+      </p>
+
+      <div class="learning-outcomes c3">
+        <h3>Apprentissages Critiques – Niveau 3</h3>
+        <ul>
+          <li>Concevoir et mettre en œuvre une infrastructure réseau sécurisée</li>
+          <li>Déployer et orchestrer des services dans des environnements virtualisés ou conteneurisés</li>
+          <li>Sécuriser les services et les données d'un système informatique</li>
+          <li>Automatiser l'administration système avec des scripts et des outils d'IaC</li>
+          <li>Superviser et maintenir un système en production (monitoring, alertes, sauvegardes)</li>
+        </ul>
+      </div>
+
+      <h2>Domaines de compétences techniques</h2>
+
+      <div class="skill-grid">
+        <div class="skill-card">
+          <span class="skill-icon">🖧</span>
+          <h4>Réseaux</h4>
+          <p>TCP/IP, VLAN, routage, pare-feu, VPN, DNS, DHCP, proxy, load balancer</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🐧</span>
+          <h4>Administration Linux</h4>
+          <p>Debian/Ubuntu, gestion des services systemd, droits utilisateurs, cron, scripting Bash</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🐳</span>
+          <h4>Conteneurisation</h4>
+          <p>Docker, Docker Compose, Kubernetes (K8s), Helm, registries d'images</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">☁️</span>
+          <h4>Cloud Computing</h4>
+          <p>AWS, Azure, GCP · IaaS, PaaS, SaaS · Terraform, Ansible</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔒</span>
+          <h4>Cybersécurité</h4>
+          <p>Chiffrement (TLS/SSL), PKI, authentification multi-facteurs, tests d'intrusion basiques</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📡</span>
+          <h4>Supervision</h4>
+          <p>Prometheus, Grafana, ELK Stack, alerting, analyse de logs</p>
+        </div>
+      </div>
+
+      <h2>Technologies maîtrisées</h2>
+      <div class="tech-tags" aria-label="Technologies">
+        <span class="tech-tag">Linux (Debian, Ubuntu)</span>
+        <span class="tech-tag">Bash</span>
+        <span class="tech-tag">Docker</span>
+        <span class="tech-tag">Kubernetes</span>
+        <span class="tech-tag">Terraform</span>
+        <span class="tech-tag">Ansible</span>
+        <span class="tech-tag">Nginx</span>
+        <span class="tech-tag">Apache</span>
+        <span class="tech-tag">SSH / OpenSSL</span>
+        <span class="tech-tag">Prometheus</span>
+        <span class="tech-tag">Grafana</span>
+        <span class="tech-tag">AWS EC2 / S3</span>
+        <span class="tech-tag">iptables</span>
+        <span class="tech-tag">Wireshark</span>
+      </div>
+
+      <h2>Exemples de réalisations</h2>
+
+      <div class="project-card">
+        <h4>🏗️ Déploiement d'une infrastructure microservices</h4>
+        <p>
+          Mise en place d'un cluster Kubernetes on-premise pour héberger une
+          application composée de plusieurs microservices. Configuration du
+          monitoring avec Prometheus et Grafana, mise en place de l'autoscaling
+          horizontal et des politiques de réseau.
+        </p>
+        <div class="project-meta">
+          <span>🏷️ Kubernetes · Helm · Prometheus · Grafana</span>
+          <span>📅 SAÉ Semestre 5</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h4>🔐 Audit et sécurisation d'un serveur web</h4>
+        <p>
+          Audit de sécurité d'un serveur Nginx exposé sur Internet : analyse des
+          vulnérabilités, configuration des en-têtes HTTP de sécurité, mise en place
+          de fail2ban, configuration TLS/SSL et implémentation d'une politique de
+          sauvegarde automatisée.
+        </p>
+        <div class="project-meta">
+          <span>🏷️ Linux · Nginx · Bash · OpenSSL · fail2ban</span>
+          <span>📅 Projet SAÉ S6</span>
+        </div>
+      </div>
+
+      <nav class="page-nav" aria-label="Navigation entre pages">
+        <button class="btn-nav btn-prev" data-page="3">← Précédent</button>
+        <span class="page-nav-info"></span>
+        <button class="btn-nav btn-next" data-page="5">Suivant →</button>
+      </nav>
+    </section>
+
+    <!-- ── CHAPITRE 4 : GÉRER ─────────────────── -->
+    <section id="page-c4" class="page" aria-label="Compétence 4 – Gérer">
+      <div class="chapter-header">
+        <span class="chapter-tag" style="background:var(--c4)">Compétence 4</span>
+        <p class="chapter-number">Chapitre 04</p>
+        <h2 class="chapter-title">Gérer</h2>
+        <p class="chapter-subtitle">Organiser la gestion des données et de l'information</p>
+      </div>
+
+      <p>
+        La compétence <strong>Gérer</strong> concerne la modélisation, l'exploitation et
+        la sécurisation des données. À l'issue du BUT 3, l'étudiant sait concevoir des
+        bases de données relationnelles et NoSQL adaptées aux besoins, optimiser les
+        requêtes et garantir la confidentialité et l'intégrité des données.
+      </p>
+
+      <div class="learning-outcomes c4">
+        <h3>Apprentissages Critiques – Niveau 3</h3>
+        <ul>
+          <li>Optimiser une base de données relationnelle (indexation, plans d'exécution, vues matérialisées)</li>
+          <li>Concevoir et exploiter des bases de données NoSQL adaptées aux besoins</li>
+          <li>Assurer la confidentialité et l'intégrité des données (chiffrement, contrôle d'accès)</li>
+          <li>Organiser la restitution de données par la programmation et la visualisation</li>
+          <li>Mettre en œuvre des pipelines de traitement de données (ETL)</li>
+        </ul>
+      </div>
+
+      <h2>Domaines de compétences techniques</h2>
+
+      <div class="skill-grid">
+        <div class="skill-card">
+          <span class="skill-icon">🗄️</span>
+          <h4>Bases de données relationnelles</h4>
+          <p>Modélisation entité-relation, SQL avancé, transactions, triggers, procédures stockées</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🌐</span>
+          <h4>NoSQL</h4>
+          <p>MongoDB (documents), Redis (clé-valeur), Neo4j (graphes), Cassandra (colonnes)</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📈</span>
+          <h4>Business Intelligence</h4>
+          <p>Datawarehouse, OLAP, tableaux de bord, Power BI, Tableau, Metabase</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔐</span>
+          <h4>Sécurité des données</h4>
+          <p>RGPD, chiffrement au repos et en transit, contrôle d'accès granulaire, audit</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">⚙️</span>
+          <h4>ETL &amp; pipelines</h4>
+          <p>Extraction, transformation, chargement de données, Apache Kafka, Airflow</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔎</span>
+          <h4>Optimisation des requêtes</h4>
+          <p>EXPLAIN / ANALYZE, index B-tree &amp; hash, partitionnement, dénormalisation</p>
+        </div>
+      </div>
+
+      <h2>Technologies maîtrisées</h2>
+      <div class="tech-tags" aria-label="Technologies">
+        <span class="tech-tag">MySQL / MariaDB</span>
+        <span class="tech-tag">PostgreSQL</span>
+        <span class="tech-tag">Oracle SQL</span>
+        <span class="tech-tag">MongoDB</span>
+        <span class="tech-tag">Redis</span>
+        <span class="tech-tag">Neo4j</span>
+        <span class="tech-tag">SQL avancé (CTE, fenêtrage)</span>
+        <span class="tech-tag">Hibernate / JPA</span>
+        <span class="tech-tag">SQLAlchemy</span>
+        <span class="tech-tag">Power BI</span>
+        <span class="tech-tag">Pandas</span>
+        <span class="tech-tag">Apache Kafka</span>
+      </div>
+
+      <h2>Exemples de réalisations</h2>
+
+      <div class="project-card">
+        <h4>📊 Entrepôt de données et tableau de bord analytique</h4>
+        <p>
+          Conception d'un datawarehouse en étoile à partir de données hétérogènes
+          (CSV, API REST, base relationnelle), pipeline ETL automatisé et tableau
+          de bord Power BI permettant le suivi en temps réel de KPIs métier.
+        </p>
+        <div class="project-meta">
+          <span>🏷️ PostgreSQL · Python · Pandas · Power BI</span>
+          <span>📅 SAÉ Semestre 5</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h4>🔒 Sécurisation d'une base de données sensible</h4>
+        <p>
+          Mise en conformité RGPD d'une base de données médicale : chiffrement des
+          colonnes sensibles, politique de rôles granulaire, anonymisation des données
+          de test, audit des accès et procédure de purge automatique.
+        </p>
+        <div class="project-meta">
+          <span>🏷️ PostgreSQL · Python · pg_crypto · RGPD</span>
+          <span>📅 Projet professionnel – Alternance</span>
+        </div>
+      </div>
+
+      <nav class="page-nav" aria-label="Navigation entre pages">
+        <button class="btn-nav btn-prev" data-page="4">← Précédent</button>
+        <span class="page-nav-info"></span>
+        <button class="btn-nav btn-next" data-page="6">Suivant →</button>
+      </nav>
+    </section>
+
+    <!-- ── CHAPITRE 5 : CONDUIRE ──────────────── -->
+    <section id="page-c5" class="page" aria-label="Compétence 5 – Conduire">
+      <div class="chapter-header">
+        <span class="chapter-tag" style="background:var(--c5)">Compétence 5</span>
+        <p class="chapter-number">Chapitre 05</p>
+        <h2 class="chapter-title">Conduire</h2>
+        <p class="chapter-subtitle">Appliquer une démarche de suivi de projet en fonction des besoins métiers</p>
+      </div>
+
+      <p>
+        La compétence <strong>Conduire</strong> forme les étudiants à la gestion de projet
+        informatique sous toutes ses dimensions : cadrage du besoin, planification,
+        suivi d'avancement, gestion des risques et communication avec les parties prenantes.
+        À l'issue du BUT 3, l'étudiant est capable de piloter un projet de bout en bout
+        en choisissant la méthode la plus adaptée.
+      </p>
+
+      <div class="learning-outcomes c5">
+        <h3>Apprentissages Critiques – Niveau 3</h3>
+        <ul>
+          <li>Identifier et modéliser les processus d'une organisation (BPMN, UML)</li>
+          <li>Formaliser les besoins fonctionnels et non fonctionnels (user stories, cas d'usage)</li>
+          <li>Identifier les critères de faisabilité et les risques d'un projet</li>
+          <li>Planifier et suivre un projet avec des outils de gestion adaptés</li>
+          <li>Conduire une démarche Agile (Scrum, Kanban) ou traditionnelle (cycle en V)</li>
+        </ul>
+      </div>
+
+      <h2>Domaines de compétences techniques</h2>
+
+      <div class="skill-grid">
+        <div class="skill-card">
+          <span class="skill-icon">📋</span>
+          <h4>Méthodes agiles</h4>
+          <p>Scrum, Kanban, SAFe · sprints, backlogs, daily stand-up, rétrospectives</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🗺️</span>
+          <h4>Analyse et modélisation</h4>
+          <p>UML (cas d'usage, séquence, classes), BPMN, user stories, personas</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📅</span>
+          <h4>Planification</h4>
+          <p>Diagramme de Gantt, WBS, chemin critique, estimation de charge (Planning Poker)</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">⚠️</span>
+          <h4>Gestion des risques</h4>
+          <p>Identification, évaluation (probabilité × impact), plans de mitigation</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔧</span>
+          <h4>Outils de gestion</h4>
+          <p>Jira, Trello, GitHub Projects, Notion, Microsoft Project</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📝</span>
+          <h4>Documentation</h4>
+          <p>Cahier des charges, spécifications techniques, rapports de suivi, post-mortems</p>
+        </div>
+      </div>
+
+      <h2>Technologies &amp; outils maîtrisés</h2>
+      <div class="tech-tags" aria-label="Outils">
+        <span class="tech-tag">Jira</span>
+        <span class="tech-tag">GitHub Projects</span>
+        <span class="tech-tag">Trello</span>
+        <span class="tech-tag">Notion</span>
+        <span class="tech-tag">Confluence</span>
+        <span class="tech-tag">UML (StarUML)</span>
+        <span class="tech-tag">BPMN (Camunda)</span>
+        <span class="tech-tag">Scrum / Kanban</span>
+        <span class="tech-tag">Gantt (GanttProject)</span>
+        <span class="tech-tag">Draw.io</span>
+        <span class="tech-tag">Miro</span>
+      </div>
+
+      <h2>Exemples de réalisations</h2>
+
+      <div class="project-card">
+        <h4>🚀 Pilotage d'un projet agile de 6 mois</h4>
+        <p>
+          Rôle de Scrum Master sur un projet SAÉ en équipe de 5 personnes. Organisation
+          des cérémonies Scrum, gestion du backlog produit, suivi des sprints sur Jira,
+          rédaction des rapports d'avancement et présentation au client.
+        </p>
+        <div class="project-meta">
+          <span>🏷️ Scrum · Jira · Confluence · Teams</span>
+          <span>📅 SAÉ Semestres 5–6</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h4>📑 Rédaction d'un cahier des charges fonctionnel</h4>
+        <p>
+          Recueil des besoins auprès d'un client réel (entretiens, ateliers),
+          rédaction du cahier des charges fonctionnel complet (contexte, périmètre,
+          exigences fonctionnelles et non fonctionnelles, contraintes, planning
+          prévisionnel et budget estimé).
+        </p>
+        <div class="project-meta">
+          <span>🏷️ UML · BPMN · Word · Draw.io</span>
+          <span>📅 SAÉ Semestre 4</span>
+        </div>
+      </div>
+
+      <nav class="page-nav" aria-label="Navigation entre pages">
+        <button class="btn-nav btn-prev" data-page="5">← Précédent</button>
+        <span class="page-nav-info"></span>
+        <button class="btn-nav btn-next" data-page="7">Suivant →</button>
+      </nav>
+    </section>
+
+    <!-- ── CHAPITRE 6 : COLLABORER ────────────── -->
+    <section id="page-c6" class="page" aria-label="Compétence 6 – Collaborer">
+      <div class="chapter-header">
+        <span class="chapter-tag" style="background:var(--c6)">Compétence 6</span>
+        <p class="chapter-number">Chapitre 06</p>
+        <h2 class="chapter-title">Collaborer</h2>
+        <p class="chapter-subtitle">S'intégrer et s'impliquer dans une équipe informatique</p>
+      </div>
+
+      <p>
+        La compétence <strong>Collaborer</strong> est transversale à toutes les autres :
+        elle concerne la capacité à travailler efficacement en équipe, à communiquer
+        avec des interlocuteurs variés (techniques ou non), à assurer une veille
+        technologique et à développer son projet professionnel. Au niveau BUT 3,
+        l'étudiant est en mesure de contribuer activement, voire de coordonner
+        une équipe technique.
+      </p>
+
+      <div class="learning-outcomes c6">
+        <h3>Apprentissages Critiques – Niveau 3</h3>
+        <ul>
+          <li>Organiser et partager une veille technologique et informationnelle</li>
+          <li>Développer et expliciter son projet professionnel au sein du secteur informatique</li>
+          <li>Communiquer efficacement avec les différents acteurs d'un projet</li>
+          <li>Appliquer les bonnes pratiques de travail collaboratif (versionning, revues de code)</li>
+          <li>Prendre en compte l'impact sociétal et environnemental du numérique</li>
+        </ul>
+      </div>
+
+      <h2>Domaines de compétences</h2>
+
+      <div class="skill-grid">
+        <div class="skill-card">
+          <span class="skill-icon">🤝</span>
+          <h4>Travail en équipe</h4>
+          <p>Git workflow collaboratif, code review, pair programming, branching strategy</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🗣️</span>
+          <h4>Communication</h4>
+          <p>Présentations techniques, rédaction de documentation, communication client</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔭</span>
+          <h4>Veille technologique</h4>
+          <p>Agrégateurs de flux (Feedly), newsletters, conférences (DevFest, Forum PHP…)</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🌍</span>
+          <h4>Impact &amp; éthique</h4>
+          <p>Numérique responsable, éco-conception, RGPD, accessibilité (WCAG), inclusion</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🚀</span>
+          <h4>Développement professionnel</h4>
+          <p>Portfolio, CV, LinkedIn, réseau professionnel, préparation aux entretiens</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🌐</span>
+          <h4>Langues &amp; international</h4>
+          <p>Documentation technique en anglais, suivi de conférences internationales</p>
+        </div>
+      </div>
+
+      <h2>Outils &amp; pratiques</h2>
+      <div class="tech-tags" aria-label="Outils et pratiques">
+        <span class="tech-tag">Git (flow &amp; rebase)</span>
+        <span class="tech-tag">GitHub / GitLab</span>
+        <span class="tech-tag">Pull requests &amp; revues</span>
+        <span class="tech-tag">Slack / Teams</span>
+        <span class="tech-tag">Documentation Markdown</span>
+        <span class="tech-tag">Présentation Agile</span>
+        <span class="tech-tag">Veille (Feedly, RSS)</span>
+        <span class="tech-tag">LinkedIn professionnel</span>
+        <span class="tech-tag">Anglais technique (B2+)</span>
+        <span class="tech-tag">WCAG 2.1</span>
+        <span class="tech-tag">Éco-conception</span>
+      </div>
+
+      <h2>Exemples de réalisations</h2>
+
+      <div class="project-card">
+        <h4>📰 Blog de veille technologique</h4>
+        <p>
+          Tenue d'un blog mensuel de veille technologique tout au long du BUT :
+          articles de synthèse sur des technologies émergentes (IA générative,
+          WebAssembly, Rust…), partage au sein de la promotion et avec les
+          enseignants.
+        </p>
+        <div class="project-meta">
+          <span>🏷️ Markdown · GitHub Pages · Feedly</span>
+          <span>📅 Tout au long du BUT</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h4>🤝 Contribution open source</h4>
+        <p>
+          Participation à un projet open source : correction de bugs, rédaction de
+          documentation, ouverture d'issues, soumission de pull requests et interactions
+          avec la communauté internationale en anglais.
+        </p>
+        <div class="project-meta">
+          <span>🏷️ GitHub · Open Source · Anglais</span>
+          <span>📅 Initiative personnelle – BUT 3</span>
+        </div>
+      </div>
+
+      <nav class="page-nav" aria-label="Navigation entre pages">
+        <button class="btn-nav btn-prev" data-page="6">← Précédent</button>
+        <span class="page-nav-info"></span>
+        <button class="btn-nav btn-next" data-page="8">Suivant →</button>
+      </nav>
+    </section>
+
+    <!-- ── CONCLUSION ─────────────────────────── -->
+    <section id="page-conclusion" class="page" aria-label="Conclusion">
+      <div class="chapter-header">
+        <span class="chapter-tag" style="background:var(--color-accent)">Bilan</span>
+        <p class="chapter-number">Conclusion</p>
+        <h2 class="chapter-title">Un diplômé prêt pour le monde professionnel</h2>
+        <p class="chapter-subtitle">Synthèse des compétences acquises à l'issue du BUT Informatique</p>
+      </div>
+
+      <p>
+        Au terme de ces trois années de formation intensive, le titulaire du
+        <strong>BUT Informatique</strong> dispose d'un socle de compétences solide
+        et polyvalent, lui permettant de s'insérer rapidement dans le monde professionnel
+        ou de poursuivre ses études vers un master ou une école d'ingénieurs.
+      </p>
+
+      <div class="skills-summary">
+        <div class="skills-summary-card">
+          <span class="summary-icon">💻</span>
+          <h4>Réaliser</h4>
+          <p>Applications robustes, architecturées et testées</p>
+        </div>
+        <div class="skills-summary-card">
+          <span class="summary-icon">⚡</span>
+          <h4>Optimiser</h4>
+          <p>Code performant et qualité logicielle maîtrisée</p>
+        </div>
+        <div class="skills-summary-card">
+          <span class="summary-icon">🖧</span>
+          <h4>Administrer</h4>
+          <p>Infra cloud, sécurité et disponibilité</p>
+        </div>
+        <div class="skills-summary-card">
+          <span class="summary-icon">🗄️</span>
+          <h4>Gérer</h4>
+          <p>Données structurées, NoSQL et conformité</p>
+        </div>
+        <div class="skills-summary-card">
+          <span class="summary-icon">📋</span>
+          <h4>Conduire</h4>
+          <p>Projets agiles livrés dans les délais</p>
+        </div>
+        <div class="skills-summary-card">
+          <span class="summary-icon">🤝</span>
+          <h4>Collaborer</h4>
+          <p>Équipier autonome, communicant et en veille</p>
+        </div>
+      </div>
+
+      <h2>Perspectives professionnelles</h2>
+      <p>
+        Le BUT Informatique ouvre la porte à de nombreux métiers du numérique.
+        Parmi les débouchés les plus courants à l'issue de la formation :
+      </p>
+
+      <ul>
+        <li><strong>Développeur web / mobile</strong> – Front-end, back-end ou full-stack</li>
+        <li><strong>Ingénieur DevOps / Cloud</strong> – Infrastructure et déploiement</li>
+        <li><strong>Administrateur systèmes et réseaux</strong> – Exploitation et sécurité</li>
+        <li><strong>Analyste-programmeur / développeur logiciel</strong> – Applications métier</li>
+        <li><strong>Data analyst / ingénieur données</strong> – Exploitation de la donnée</li>
+        <li><strong>Chef de projet junior</strong> – Coordination et pilotage</li>
+      </ul>
+
+      <h2>Poursuite d'études</h2>
+      <p>
+        Le grade de licence conféré par le BUT permet également de candidater à :
+      </p>
+      <ul>
+        <li>Master informatique (Master 1 en université)</li>
+        <li>École d'ingénieurs (admissions parallèles en 4ème année)</li>
+        <li>Mastère spécialisé ou MBA (en formation continue)</li>
+      </ul>
+
+      <div class="callout">
+        « Le BUT Informatique forme des professionnels capables d'appréhender l'ensemble du
+        cycle de vie d'un système d'information, depuis l'analyse des besoins jusqu'à la
+        mise en production et la maintenance, en passant par la conception, le développement
+        et les tests. »
+      </div>
+
+      <nav class="page-nav" aria-label="Navigation entre pages">
+        <button class="btn-nav btn-prev" data-page="7">← Précédent</button>
+        <span class="page-nav-info"></span>
+        <button class="btn-nav btn-next" data-page="0" style="visibility:hidden">Suivant →</button>
+      </nav>
+    </section>
+
+  </main>
+</div>
+
+<script src="js/ebook.js"></script>
+</body>
+</html>
